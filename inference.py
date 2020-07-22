@@ -21,11 +21,6 @@ image_mean = np.array([0.485, 0.456, 0.406])
 image_std = np.array([0.229, 0.224, 0.225])
 
 
-img_transforms = transforms.Compose([
-    transforms.Resize((288, 800)),
-    transforms.ToTensor(),
-    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
-])
 for file in os.listdir('/media/yushe/data/CULane/driver_23_30frame/05151640_0419.MP4/'):
     if not file.endswith("jpg"):
         continue
